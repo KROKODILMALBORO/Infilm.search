@@ -11,7 +11,7 @@ export async function getFilms(filters) {
         const res = await fetch(`${ROOT_URL}${INSTANCE_PATH_FILMS}?${stringified}`, {
             method: 'GET',
             headers: [
-                ['X-API-KEY', {TOKEN}],
+                ['X-API-KEY', TOKEN],
                 ['Content-Type', 'application/json']
             ]
         })
@@ -33,7 +33,7 @@ export async function getFilm(id) {
         const res = await fetch(`${ROOT_URL}${INSTANCE_PATH_FILMS}/${id}`, {
             method: 'GET',
             headers: [
-                ['X-API-KEY', {TOKEN}],
+                ['X-API-KEY', TOKEN],
                 ['Content-Type', 'application/json']
             ]
         })
@@ -52,7 +52,7 @@ export async function getSimilarsFilms(id) {
         const res = await fetch(`${ROOT_URL}${INSTANCE_PATH_FILMS}/${id}/similars`, {
             method: 'GET',
             headers: [
-                ['X-API-KEY', {TOKEN}],
+                ['X-API-KEY', TOKEN],
                 ['Content-Type', 'application/json']
             ]
         })
