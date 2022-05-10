@@ -2,7 +2,7 @@ import React from 'react'
 
 const Pagination = (props) => {
     const previousPage = () => {
-        if (props.filters.page == 1) {
+        if (props.filters.page === 1) {
 
             return
         }
@@ -13,13 +13,13 @@ const Pagination = (props) => {
     }
 
     const nextPage = () => {
-        if (props.totalPages == props.filters.page) {
+        if (props.totalPages === props.filters.page) {
 
             return
         }
 
         if (props.persons) {
-            if (props.filters.page == 2) {
+            if (props.filters.page === 2) {
 
                 return
             }
