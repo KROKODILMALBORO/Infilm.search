@@ -11,6 +11,9 @@
 # production
 /build
 
+# personal information
+token.js
+
 # misc
 .DS_Store
 .env.local
