@@ -4,6 +4,7 @@ import {useFilms} from '../../../instances/films/hooks'
 
 import Search from './Search'
 import Film from './Film'
+import Spinner from '../ui/Spinner'
 
 const FilmsSearchPage = () => {
     const [filters, setFilters] = useState({
@@ -42,7 +43,7 @@ const FilmsSearchPage = () => {
                         film={film}
                     />
                 ) :
-                <span>Loading..</span>
+                <Spinner />
             }
         </div>
     )
