@@ -5,6 +5,7 @@ import {useFilms} from '../../../instances/films/hooks'
 import Search from './Search'
 import Film from './Film'
 import Spinner from '../ui/Spinner'
+import Pagination from '../ui/Pagination'
 
 const FilmsSearchPage = () => {
     const [filters, setFilters] = useState({
@@ -18,7 +19,7 @@ const FilmsSearchPage = () => {
         page: 1,
     })
 
-    const {films, getFilms} = useFilms()
+    const {films, getFilms, totalPages} = useFilms()
 
     const onSearch = (filters) => {
         getFilms(filters)
@@ -44,6 +45,16 @@ const FilmsSearchPage = () => {
                     />
                 ) :
                 <Spinner />
+            }
+            {
+                films ?
+                <Pagination
+                    filters={filters}
+                    setFilters={setFilters}
+                    onSearch={onSearch}
+                    totalPages={totalPages}
+                /> :
+                <></>
             }
         </div>
     )
