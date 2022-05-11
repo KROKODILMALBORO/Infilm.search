@@ -5,6 +5,7 @@ import MainPage from './MainPage'
 import FilmsSearchPage from './FilmsSearchPage'
 import OneFilmPage from './FilmsSearchPage/OneFilmPage'
 import PersonsSearchPage from './PersonsSearchPage'
+import OnePersonPage from './PersonsSearchPage/OnePersonPage'
 
 const Content = () => {
     return (
@@ -25,6 +26,10 @@ const Content = () => {
                 <Route
                     path='/persons_search'
                     element={<PersonsSearchPage />}
+                />
+                <Route
+                    path='/persons_search/one_person/:id'
+                    element={<OnePersonPage/>}
                 />
             </Routes>
         </div>
