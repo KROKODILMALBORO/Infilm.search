@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom'
 import {usePerson} from '../../../../instances/persons/hooks'
 
 import BasicInfo from './BasicInfo'
+import FilmsByPerson from './FilmsByPerson'
 import Spinner from '../../ui/Spinner'
 
 const OnePersonPage = () => {
@@ -22,6 +23,7 @@ const OnePersonPage = () => {
     return (
         <div className='container'>
             <BasicInfo person={person}/>
+            <FilmsByPerson person={person}/>
         </div>
     )
 }
