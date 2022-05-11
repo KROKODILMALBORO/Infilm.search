@@ -6,6 +6,7 @@ import {usePersonsByFilm} from '../../../../instances/persons/hooks'
 
 import BasicInfo from './BasicInfo'
 import DirectorsInfo from './DirectorsInfo'
+import ActorsInfo from './ActorsInfo'
 import Spinner from '../../ui/Spinner'
 
 const OneFilmPage = () => {
@@ -27,6 +28,7 @@ const OneFilmPage = () => {
         <div className='container'>
             <BasicInfo film={film}/>
             <DirectorsInfo persons={personsByFilm}/>
+            <ActorsInfo persons={personsByFilm}/>
         </div>
     )
 }
