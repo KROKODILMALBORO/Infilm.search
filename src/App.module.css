@@ -3,3 +3,16 @@
         90deg, #29323c, #485563
     );
 }
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #212529;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a1a1a14a;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #212529;
+}
