@@ -6,6 +6,14 @@
     background:  #484f5797;
 }
 
+.linkPerson {
+    background: #212529;
+}
+
+.linkPerson:hover {
+    background: #5a5f66;
+}
+
 .informativeBlock {
     background: #292D32;
 }
