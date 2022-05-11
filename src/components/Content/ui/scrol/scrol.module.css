@@ -1,0 +1,23 @@
+.scrol {
+    overflow: auto;
+}
+
+.scrol::-webkit-scrollbar {
+  width: 10px;
+  background-color: #0000;
+}
+
+.scrol::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #707070;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+.scrol::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #00000029;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}

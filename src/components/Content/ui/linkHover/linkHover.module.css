@@ -5,3 +5,11 @@
 .linkFilm:hover {
     background:  #484f5797;
 }
+
+.informativeBlock {
+    background: #292D32;
+}
+
+.informativeBlock:hover {
+    background: #373A3E;
+}
