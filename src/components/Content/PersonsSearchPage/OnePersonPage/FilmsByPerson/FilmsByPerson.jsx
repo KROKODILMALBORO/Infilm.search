@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import FilmByPerson from './FilmByPerson'
 import Spinner from '../../../ui/Spinner'
 
-import scrol from '../../../ui/scrol/scrol.module.css'
+import scroll from '../../../ui/scroll/scroll.module.css'
 import linkHover from '../../../ui/linkHover/linkHover.module.css'
 
 const FilmsByPerson = (props) => {
@@ -34,7 +34,7 @@ const FilmsByPerson = (props) => {
             </div>
             {
                 isShownContent ?
-                <div className={`d-flex flex-row justify-content-start bg-dark pt-1 mx-1 ${scrol.scrol}`}>
+                <div className={`d-flex flex-row justify-content-start bg-dark pt-1 mx-1 ${scroll.scroll}`}>
                     {
                         props.person.films ?
                         props.person.films.slice(0, 50).map((filmByPerson) =>

@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import SimilarFilm from './SimilarFilm'
 import Spinner from '../../../ui/Spinner'
 
-import scrol from '../../../ui/scrol/scrol.module.css'
+import scroll from '../../../ui/scroll/scroll.module.css'
 import linkHover from '../../../ui/linkHover/linkHover.module.css'
 
 const SimilarsFilms = (props) => {
@@ -32,7 +32,7 @@ const SimilarsFilms = (props) => {
             </div>
             {
                 isShownContent ?
-                <div className={`d-flex flex-row justify-content-start bg-dark pt-1 mx-1 ${scrol.scrol}`}>
+                <div className={`d-flex flex-row justify-content-start bg-dark pt-1 mx-1 ${scroll.scroll}`}>
                     {
                         props.similarsFilms == null ?
                         <Spinner /> :

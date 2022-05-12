@@ -10,8 +10,8 @@ import Pagination from '../ui/Pagination'
 const FilmsSearchPage = () => {
     const [filters, setFilters] = useState({
         keyword: '',
-        yearFrom: 2020,
-        yearTo: 2021,
+        yearFrom: 2000,
+        yearTo: 2000,
         ratingFrom: 6,
         ratingTo: 9,
         type: 'ALL',

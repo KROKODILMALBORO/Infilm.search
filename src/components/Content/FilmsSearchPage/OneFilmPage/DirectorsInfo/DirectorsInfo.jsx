@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import Director from './Director'
 import Spinner from '../../../ui/Spinner'
 
-import scrol from '../../../ui/scrol/scrol.module.css'
+import scroll from '../../../ui/scroll/scroll.module.css'
 import linkHover from '../../../ui/linkHover/linkHover.module.css'
 
 const DirectorsInfo = (props) => {
@@ -40,7 +40,7 @@ const DirectorsInfo = (props) => {
             </div>
             {
                 isShownContent ?
-                <div className={`d-flex flex-row justify-content-start bg-dark py-1 pb-2 mx-1 ${scrol.scrol}`}>
+                <div className={`d-flex flex-row justify-content-start bg-dark py-1 pb-2 mx-1 ${scroll.scroll}`}>
                     {
                         props.persons == null ?
                         <Spinner /> :
