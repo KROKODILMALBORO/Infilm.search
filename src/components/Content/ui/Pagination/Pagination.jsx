@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 
 const Pagination = (props) => {
     const previousPage = () => {
@@ -19,7 +20,7 @@ const Pagination = (props) => {
         }
 
         if (props.persons) {
-            if (props.filters.page === 2) {
+            if (props.filters.page === 2) { // Backend implementation moments :)
 
                 return
             }
@@ -34,9 +35,21 @@ const Pagination = (props) => {
         <div className='d-flex flex-row justify-content-center'>
             <nav className='pt-3' aria-label='Page navigation example'>
                 <ul className='pagination pagination-lg shadow-lg'>
-                    <li className='page-item'>
+                    <li className={
+                            classNames(
+                                'page-item',
+                                {'disabled': props.filters.page === 1}
+                            )
+                        }
+                    >
                         <button
-                            className='page-link border-0 bg-dark bg-opacity-75 fw-bold text-info'
+                            className={
+                                classNames(
+                                    'page-link border-0 bg-dark bg-opacity-75 fw-bold',
+                                    {'text-info': props.filters.page > 1},
+                                    {'text-secondary': props.filters.page === 1}
+                                )
+                            }
                             onClick={previousPage}
                         >
                             &lt;
@@ -47,9 +60,22 @@ const Pagination = (props) => {
                             {props.filters.page}
                         </span>
                     </li>
-                    <li className='page-item'>
+                    <li className={
+                            classNames(
+                                'page-item',
+                                {'disabled': props.filters.page === props.totalPages}
+                            )
+                        }
+                    >
                         <button
-                            className='page-link border-0 bg-dark bg-opacity-75 fw-bold text-info'
+                            className={
+                                classNames(
+                                    'page-link border-0 bg-dark bg-opacity-75 fw-bold',
+                                    {'text-info': !props.persons && props.filters.page < props.totalPages},
+                                    {'text-secondary': props.filters.page === props.totalPages},
+                                    {'text-secondary': props.persons && props.filters.page === 2}
+                                )
+                            }
                             onClick={nextPage}
                         >
                             &gt;
