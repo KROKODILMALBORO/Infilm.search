@@ -1,7 +1,7 @@
 import React from 'react'
 
-import {getGenres, getCountries, getType} from '../../functions'
-import {getFilmLength, getRatingAgeLimits} from './functions'
+import {formatGenresToString, formatCountriesToString, formatType} from '../../functions'
+import {formatFilmLength, fomatRatingAgeLimits} from './functions'
 
 import classes from './BasicInfo.module.css'
 
@@ -17,7 +17,7 @@ const BasicInfo = (props) => {
                         alt='...'
                     />
                     <h3 className='d-flex justify-content-center bg-secondary bg-opacity-10 rounded shadow pb-2 mt-2'>
-                        {getType(props.film.type)}
+                        {formatType(props.film.type)}
                     </h3>
                     <h3 className='d-flex justify-content-center bg-secondary bg-opacity-10 rounded shadow pb-2 mt-2'>
                         {props.film.year}
@@ -86,7 +86,7 @@ const BasicInfo = (props) => {
                                 </div>
                                 <div className='col-9 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
-                                        {getGenres(props.film.genres)}
+                                        {formatGenresToString(props.film.genres)}
                                     </h5>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ const BasicInfo = (props) => {
                                 </div>
                                 <div className='col-9 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
-                                        {getCountries(props.film.countries)}
+                                        {formatCountriesToString(props.film.countries)}
                                     </h5>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ const BasicInfo = (props) => {
                                 </div>
                                 <div className='col-9 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
-                                        {getFilmLength(props.film.filmLength)}
+                                        {formatFilmLength(props.film.filmLength)}
                                     </h5>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@ const BasicInfo = (props) => {
                                 </div>
                                 <div className='col-9 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
-                                        {getRatingAgeLimits(props.film.ratingAgeLimits)}
+                                        {fomatRatingAgeLimits(props.film.ratingAgeLimits)}
                                     </h5>
                                 </div>
                             </div>

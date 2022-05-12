@@ -8,7 +8,7 @@ import imageBottomWind from './media/imageBottomWind.png'
 
 const MainPage = () => {
     return (
-        <>
+        <div>
             <div className='d-flex flex-row justify-content-start align-items-center'>
                 <img
                     className='me-5'
@@ -78,7 +78,7 @@ const MainPage = () => {
                     alt='...'
                 />
             </div>
-        </>
+        </div>
     )
 }
 

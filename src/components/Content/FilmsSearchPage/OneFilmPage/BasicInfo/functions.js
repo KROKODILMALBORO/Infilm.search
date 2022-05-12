@@ -1,19 +1,19 @@
-export const getFilmLength = (length) => {
-    if (!length) {
+export const formatFilmLength = (filmLength) => {
+    if (!filmLength) {
 
-        return <span>-</span>
+        return '-'
     }
 
-    return <span>{length} минут(ы)</span>
+    return `${filmLength} минут(ы)`
 }
 
-export const getRatingAgeLimits = (ratingAgeLimits) => {
+export const fomatRatingAgeLimits = (ratingAgeLimits) => {
     if (!ratingAgeLimits) {
 
-        return <span>0+</span>
+        return '0+'
     }
 
     const result = parseInt(ratingAgeLimits.match(/\d+/))
 
-    return <span>{result}+</span>
+    return `${result}+`
 }

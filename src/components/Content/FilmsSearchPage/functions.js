@@ -1,27 +1,23 @@
-export const getGenres = (arr) => {
-    const str = arr.map((obj) => obj.genre).join(', ')
+export const formatGenresToString = (genresArr) => {
+    const result = genresArr.map((genreObj) => genreObj.genre).join(', ')
 
-    if (str === '') {
-        return <span>(Данные отсутствуют)</span>
+    if (result === '') {
+        return '(Данные отсутствуют)'
     }
 
-    const result = str[0].toUpperCase() + str.slice(1)
-
-    return <span>{result}</span>
+    return result[0].toUpperCase() + result.slice(1)
 }
 
-export const getCountries = (arr) => {
-    if (arr.length === 0) {
-        return <span>(Данные отсутствуют)</span>
+export const formatCountriesToString = (countriesArr) => {
+    if (countriesArr.length === 0) {
+        return '(Данные отсутствуют)'
     }
 
-    const result = arr.map((obj) => obj.country).join(', ')
-
-    return <span>{result}</span>
+    return countriesArr.map((countriesObj) => countriesObj.country).join(', ')
 }
 
-export const getType = (str) => {
-    switch (str) {
+export const formatType = (type) => {
+    switch (type) {
         case 'FILM':
             return 'Фильм'
         case 'TV_SERIES':
