@@ -4,15 +4,9 @@ import {Link} from 'react-router-dom'
 import linkHover from '../../../../ui/linkHover/linkHover.module.css'
 
 const FilmByPerson = (props) => {
-    if (!props.filmByPerson.nameRu) {
-
-        return
-    }
-
     return (
         <Link
             className='col-4 mb-2 text-decoration-none'
-            type='button'
             to={`/films/${props.filmByPerson.filmId}`}
         >
             {

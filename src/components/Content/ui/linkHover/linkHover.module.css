@@ -1,5 +1,6 @@
 .linkFilm {
     background: #484f5750;
+    cursor: pointer;
 }
 
 .linkFilm:hover {
@@ -8,6 +9,7 @@
 
 .linkPerson {
     background: #212529;
+    cursor: pointer;
 }
 
 .linkPerson:hover {
@@ -16,6 +18,7 @@
 
 .informativeBlock {
     background: #292D32;
+    cursor: pointer;
 }
 
 .informativeBlock:hover {

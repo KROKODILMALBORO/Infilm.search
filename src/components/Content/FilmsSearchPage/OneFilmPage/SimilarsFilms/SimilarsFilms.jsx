@@ -14,15 +14,11 @@ const SimilarsFilms = (props) => {
             <div
                 className={`d-flex flex-row justify-content-between rounded-end border-start border-secondary shadow w-100 p-1 pt-2 ps-3 ${linkHover.informativeBlock}`}
                 onClick={() => setIsShownContent(!isShownContent)}
-                type='button'
             >
                 <h4>
                     Похожие
                 </h4>
-                <h5
-                    className='text-light text-opacity-25 fw-bold pt-1 pe-3'
-                    type='button'
-                >
+                <h5 className='text-light text-opacity-25 fw-bold pt-1 pe-3'>
                     {
                         isShownContent ?
                         <>&#x25B2;</> :
@@ -31,24 +27,23 @@ const SimilarsFilms = (props) => {
                 </h5>
             </div>
             {
-                isShownContent ?
+                isShownContent &&
                 <div className={`d-flex flex-row justify-content-start bg-dark pt-1 mx-1 ${scroll.scroll}`}>
                     {
-                        props.similarsFilms === null ?
-                        <Spinner /> :
-                        props.similarsFilms.length === 0 ?
-                            <h5 className='text-light text-opacity-25 pb-0 p-2'>
-                                Похожих произведений не найдено..
-                            </h5> :
-                            props.similarsFilms.map((similarFilm) =>
-                                <SimilarFilm
-                                    key={similarFilm.staffId}
-                                    similarFilm={similarFilm}
-                                />
-                        )
+                        props.similarsFilms ?
+                            props.similarsFilms.length === 0 ?
+                                <h5 className='text-light text-opacity-25 pb-0 p-2'>
+                                    Похожих произведений не найдено
+                                </h5> :
+                                props.similarsFilms.map((similarFilm) =>
+                                    <SimilarFilm
+                                        key={similarFilm.staffId}
+                                        similarFilm={similarFilm}
+                                    />
+                            ) :
+                        <Spinner />
                     }
-                </div> :
-                <></>
+                </div>
             }
         </div>
     )

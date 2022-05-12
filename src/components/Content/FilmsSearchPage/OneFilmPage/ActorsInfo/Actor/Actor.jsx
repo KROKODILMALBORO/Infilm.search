@@ -4,15 +4,9 @@ import {Link} from 'react-router-dom'
 import linkHover from '../../../../ui/linkHover/linkHover.module.css'
 
 const Actor = (props) => {
-    if (!props.person) {
-
-        return <div className='spinner-grow text-light p-4 m-4'></div>
-    }
-
     return (
         <Link
             className='col-2 mb-2 text-decoration-none'
-            type='button'
             to={`/persons/${props.person.staffId}`}
         >
             <div className='d-flex justify-content-center mx-2'>

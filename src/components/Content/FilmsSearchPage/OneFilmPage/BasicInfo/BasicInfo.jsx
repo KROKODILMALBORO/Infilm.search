@@ -56,9 +56,8 @@ const BasicInfo = (props) => {
                         <div className='row'>
                             <div className='col-12 me-5'>
                             {
-                                <h4>
-                                    {props.film.description}
-                                </h4> ||
+                                props.film.description != null ?
+                                <h4>{props.film.description}</h4> :
                                 <h3 className='text-light text-opacity-25 pe-5 me-5'>
                                     (Данные об описании произведения временно отсутствуют)
                                 </h3>

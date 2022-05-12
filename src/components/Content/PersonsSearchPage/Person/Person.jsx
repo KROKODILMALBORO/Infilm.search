@@ -12,8 +12,8 @@ const Person = (props) => {
     return (
         <Link
             className='col-2 text-decoration-none mx-3'
-            type='button'
             to={`/persons/${props.person.kinopoiskId}`}
+            type='button'
         >
             <div className='d-flex justify-content-center'>
                 <img
@@ -24,10 +24,8 @@ const Person = (props) => {
                 />
             </div>
             <div className={`rounded-end border-start border-secondary shadow px-2 mx-3 mb-2 ${linkHover.linkPerson}`}>
-                <div>
                 <div className='text-light'>
                     <span>{props.person.nameRu}</span>
-                </div>
                 </div>
             </div>
         </Link>

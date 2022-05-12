@@ -36,11 +36,13 @@ const BasicInfo = (props) => {
                                 <div className='col-7 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
                                         {
+                                            props.person.birthday != null ?
                                             <div>
                                                 {formatDate(props.person.birthday)}
-                                                &nbsp;
-                                                ({props.person.age}&nbsp; лет)
-                                            </div> ||
+                                                <span>&nbsp;</span>
+                                                {props.person.age}
+                                                <span>&nbsp; лет</span>
+                                            </div> :
                                             <span>Данные отсутствуют</span>
                                         }
                                     </h5>

@@ -20,8 +20,8 @@ const Film = (props) => {
                         <div className='d-flex align-items-center mt-2 mb-5'>
                             <Link
                                 className={`col-10 text-decoration-none border-start border-secondary shadow px-2 ${linkHover.linkFilm}`}
-                                type='button'
                                 to={`/films/${props.film.kinopoiskId}`}
+                                type='button'
                             >
                                 <h3 className='text-light py-2'>
                                     {props.film.nameRu || props.film.nameOriginal}

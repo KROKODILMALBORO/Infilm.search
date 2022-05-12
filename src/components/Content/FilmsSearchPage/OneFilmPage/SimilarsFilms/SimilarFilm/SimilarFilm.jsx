@@ -4,15 +4,9 @@ import {Link} from 'react-router-dom'
 import linkHover from '../../../../ui/linkHover/linkHover.module.css'
 
 const SimilarFilm = (props) => {
-    if (!props.similarFilm) {
-
-        return <div className='spinner-grow text-light p-4 m-4'></div>
-    }
-
     return (
         <Link
             className='col-2 mb-2 text-decoration-none'
-            type='button'
             to={`/films/${props.similarFilm.filmId}`}
         >
             <div className='d-flex justify-content-center'>
