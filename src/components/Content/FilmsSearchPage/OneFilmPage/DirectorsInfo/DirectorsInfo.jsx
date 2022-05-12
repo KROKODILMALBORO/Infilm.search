@@ -11,7 +11,7 @@ const DirectorsInfo = (props) => {
 
     const getArrOneProfession = (key) => {
         const arrOneProfession = (props.persons || []).filter(function(person) {
-            return person.professionKey == key
+            return person.professionKey === key
         })
 
         return arrOneProfession
@@ -42,9 +42,9 @@ const DirectorsInfo = (props) => {
                 isShownContent ?
                 <div className={`d-flex flex-row justify-content-start bg-dark py-1 pb-2 mx-1 ${scroll.scroll}`}>
                     {
-                        props.persons == null ?
+                        props.persons === null ?
                         <Spinner /> :
-                        getArrOneProfession('DIRECTOR').length == 0 ?
+                        getArrOneProfession('DIRECTOR').length === 0 ?
                             <h5 className='text-light text-opacity-25 p-2 pb-0'>
                                 Режиссеров по произведению не найдено..
                             </h5> :

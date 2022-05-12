@@ -17,7 +17,7 @@ const FilmsByPerson = (props) => {
                 type='button'
             >
                 {
-                    props.person.sex == 'MALE' ?
+                    props.person.sex === 'MALE' ?
                     <h4>Принимал участие</h4> :
                     <h4>Принимала участие</h4>
                 }

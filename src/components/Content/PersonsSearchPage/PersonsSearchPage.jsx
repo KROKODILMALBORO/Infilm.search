@@ -2,25 +2,28 @@ import React, {useState, useEffect} from 'react'
 
 import {usePersons} from '../../../instances/persons/hooks'
 
+import {getDefaultFilters} from './functions'
+
 import Search from './Search'
 import Person from './Person'
 import Spinner from '../ui/Spinner'
 import Pagination from '../ui/Pagination'
 
 const PersonsSearchPage = () => {
-    const [filters, setFilters] = useState({
-        name: 'Смит',
-        page: 1,
-    })
+    const [filters, setFilters] = useState(getDefaultFilters)
 
-    const {persons, getPersons, totalPages} = usePersons()
+    const {
+        persons,
+        totalPages,
+        getPersons
+    } = usePersons()
 
     useEffect(() => {
         onSearch(filters)
     }, [])
 
     const onSearch = (filters) => {
-        if (filters.name == '') {
+        if (filters.name === '') {
 
             return alert('Введите имя для поиска')
         }

@@ -118,7 +118,7 @@ const BasicInfo = (props) => {
                 </div>
                 <div className='col-3'>
                     {
-                        props.person.facts.length == 0 ?
+                        props.person.facts.length === 0 ?
                         <></> :
                         <InterestingFacts facts={props.person.facts}/>
                     }

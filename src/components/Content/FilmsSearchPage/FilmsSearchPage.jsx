@@ -2,24 +2,21 @@ import React, {useState, useEffect} from 'react'
 
 import {useFilms} from '../../../instances/films/hooks'
 
+import {getDefaultFilters} from './functions'
+
 import Search from './Search'
 import Film from './Film'
 import Spinner from '../ui/Spinner'
 import Pagination from '../ui/Pagination'
 
 const FilmsSearchPage = () => {
-    const [filters, setFilters] = useState({
-        keyword: '',
-        yearFrom: 2000,
-        yearTo: 2000,
-        ratingFrom: 6,
-        ratingTo: 9,
-        type: 'ALL',
-        order: 'RATING',
-        page: 1,
-    })
+    const [filters, setFilters] = useState(getDefaultFilters)
 
-    const {films, getFilms, totalPages} = useFilms()
+    const {
+        films,
+        totalPages,
+        getFilms
+    } = useFilms()
 
     const onSearch = (filters) => {
         getFilms(filters)

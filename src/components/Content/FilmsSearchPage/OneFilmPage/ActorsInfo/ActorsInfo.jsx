@@ -11,7 +11,7 @@ const ActorsInfo = (props) => {
 
     const getArrOneProfession = (key) => {
         const arrOneProfession = (props.persons || []).filter(function(person) {
-            return person.professionKey == key
+            return person.professionKey === key
         })
 
         return arrOneProfession
@@ -42,9 +42,9 @@ const ActorsInfo = (props) => {
                 isShownContent ?
                 <div className={`d-flex flex-row justify-content-start bg-dark pt-1 mx-1 ${scroll.scroll}`}>
                     {
-                        props.persons == null ?
+                        props.persons === null ?
                         <Spinner /> :
-                        getArrOneProfession('ACTOR').length == 0 ?
+                        getArrOneProfession('ACTOR').length === 0 ?
                             <h5 className='text-light text-opacity-25 p-2 pb-0'>
                                 Актеров по произведению не найдено..
                             </h5> :

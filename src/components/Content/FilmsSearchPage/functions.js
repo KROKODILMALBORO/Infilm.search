@@ -50,3 +50,16 @@ export const fomatRatingAgeLimits = (ratingAgeLimits) => {
 
     return `${result}+`
 }
+
+export const getDefaultFilters = () => {
+    return {
+        keyword: '',
+        yearFrom: 2000,
+        yearTo: 2000,
+        ratingFrom: 6,
+        ratingTo: 9,
+        type: 'FILM',
+        order: 'RATING',
+        page: 1,
+    }
+}
