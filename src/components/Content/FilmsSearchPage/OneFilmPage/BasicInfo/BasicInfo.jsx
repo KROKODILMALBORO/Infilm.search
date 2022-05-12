@@ -26,11 +26,7 @@ const BasicInfo = (props) => {
                     <div className='d-flex justify-content-between mt-3'>
                         <div>
                             <h1 className={`mt-4 ps-4 ${classes.fontNameRu}`}>
-                                {
-                                    props.film.nameRu ?
-                                    props.film.nameRu :
-                                    props.film.nameOriginal
-                                }
+                                {props.film.nameRu || props.film.nameOriginal}
                             </h1>
                         </div>
                         <div className='d-flex justify-content-between'>
@@ -40,22 +36,14 @@ const BasicInfo = (props) => {
                                 </label>
                                 <div className='bg-secondary bg-opacity-10 border border-dark rounded shadow'>
                                     <h1 className={`text-light text-opacity-75 px-4 pt-2 ${classes.fontNameRu}`}>
-                                        {
-                                            props.film.ratingKinopoisk ?
-                                            props.film.ratingKinopoisk :
-                                            '-'
-                                        }
+                                        {props.film.ratingKinopoisk || '-'}
                                     </h1>
                                 </div>
                             </div>
                             <div>
                                 <div className='bg-warning rounded-end border border-dark shadow mt-4'>
                                     <h2 className='text-dark fw-bold px-3 pt-1'>
-                                        {
-                                            props.film.ratingImdb ?
-                                            props.film.ratingImdb :
-                                            '-'
-                                        }
+                                        {props.film.ratingImdb || '-'}
                                     </h2>
                                 </div>
                                 <label className='text-light text-opacity-25 ms-2'>
@@ -68,9 +56,12 @@ const BasicInfo = (props) => {
                         <div className='row'>
                             <div className='col-12 me-5'>
                             {
-                                props.film.description ?
-                                <h4>{props.film.description}</h4> :
-                                <h3 className='text-light text-opacity-25 pe-5 me-5'>(Данные об описании произведения временно отсутствуют)</h3>
+                                <h4>
+                                    {props.film.description}
+                                </h4> ||
+                                <h3 className='text-light text-opacity-25 pe-5 me-5'>
+                                    (Данные об описании произведения временно отсутствуют)
+                                </h3>
                             }
                             </div>
                         </div>

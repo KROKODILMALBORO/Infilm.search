@@ -36,12 +36,11 @@ const BasicInfo = (props) => {
                                 <div className='col-7 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
                                         {
-                                            props.person.birthday ?
-                                            <>
+                                            <div>
                                                 {formatDate(props.person.birthday)}
                                                 &nbsp;
                                                 ({props.person.age}&nbsp; лет)
-                                            </> :
+                                            </div> ||
                                             <span>Данные отсутствуют</span>
                                         }
                                     </h5>
@@ -58,8 +57,7 @@ const BasicInfo = (props) => {
                                 <div className='col-7 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
                                         {
-                                            props.person.birthplace ?
-                                            props.person.birthplace :
+                                            props.person.birthplace ||
                                             <span>Данные отсутствуют</span>
                                         }
                                     </h5>
@@ -81,7 +79,7 @@ const BasicInfo = (props) => {
                             </div>
                         </div>
                         {
-                            props.person.death ?
+                            props.person.death &&
                             <div>
                                 <div className='bg-secondary bg-opacity-10 rounded-end border-start border-secondary shadow p-1 mt-4 me-5'>
                                     <div className='row'>
@@ -111,15 +109,13 @@ const BasicInfo = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                            </div> :
-                            <></>
+                            </div>
                         }
                     </div>
                 </div>
                 <div className='col-3'>
                     {
-                        props.person.facts.length === 0 ?
-                        <></> :
+                        !!props.person.facts.length > 0 &&
                         <InterestingFacts facts={props.person.facts}/>
                     }
                 </div>
