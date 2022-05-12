@@ -13,7 +13,7 @@ const Person = (props) => {
         <Link
             className='col-2 text-decoration-none mx-3'
             type='button'
-            to={`/persons_search/one_person/${props.person.kinopoiskId}`}
+            to={`/persons/${props.person.kinopoiskId}`}
         >
             <div className='d-flex justify-content-center'>
                 <img

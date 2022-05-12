@@ -13,7 +13,7 @@ const Actor = (props) => {
         <Link
             className='col-2 mb-2 text-decoration-none'
             type='button'
-            to={`/persons_search/one_person/${props.person.staffId}`}
+            to={`/persons/${props.person.staffId}`}
         >
             <div className='d-flex justify-content-center mx-2'>
                 <img

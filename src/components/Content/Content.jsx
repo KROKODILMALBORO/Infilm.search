@@ -16,19 +16,19 @@ const Content = () => {
                     element={<MainPage />}
                 />
                 <Route
-                    path='/films_search'
+                    path='/films'
                     element={<FilmsSearchPage />}
                 />
                 <Route
-                    path='/films_search/one_film/:id'
+                    path='/films/:id'
                     element={<OneFilmPage />}
                 />
                 <Route
-                    path='/persons_search'
+                    path='/persons'
                     element={<PersonsSearchPage />}
                 />
                 <Route
-                    path='/persons_search/one_person/:id'
+                    path='/persons/:id'
                     element={<OnePersonPage/>}
                 />
             </Routes>

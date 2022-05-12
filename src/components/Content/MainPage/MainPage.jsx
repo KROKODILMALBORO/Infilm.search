@@ -35,7 +35,7 @@ const MainPage = () => {
                     <div className='d-flex justify-content-start'>
                         <Link
                             className='btn btn-lg btn-outline-info'
-                            to='/films_search'
+                            to='/films'
                         >
                             Подробнее
                         </Link>
@@ -65,7 +65,7 @@ const MainPage = () => {
                     <div className='d-flex justify-content-end'>
                         <Link
                             className='btn btn-lg btn-outline-info'
-                            to='/persons_search'
+                            to='/persons'
                         >
                             Подробнее
                         </Link>

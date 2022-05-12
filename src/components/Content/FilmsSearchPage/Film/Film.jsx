@@ -22,7 +22,7 @@ const Film = (props) => {
                             <Link
                                 className={`col-10 text-decoration-none border-start border-secondary shadow px-2 ${linkHover.linkFilm}`}
                                 type='button'
-                                to={`/films_search/one_film/${props.film.kinopoiskId}`}
+                                to={`/films/${props.film.kinopoiskId}`}
                             >
                                 <h3 className='text-light py-2'>
                                     {

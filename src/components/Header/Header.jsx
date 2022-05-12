@@ -22,7 +22,7 @@ const Header = () => {
                             <li className='nav-item mx-2'>
                                 <Link
                                     className='nav-link'
-                                    to='/films_search'
+                                    to='/films'
                                 >
                                     Поиск кино
                                 </Link>
@@ -30,7 +30,7 @@ const Header = () => {
                             <li className='nav-item mx-2'>
                                 <Link
                                     className='nav-link'
-                                    to='/persons_search'
+                                    to='/persons'
                                 >
                                     Поиск персон
                                 </Link>

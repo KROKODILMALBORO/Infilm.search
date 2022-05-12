@@ -13,7 +13,7 @@ const FilmByPerson = (props) => {
         <Link
             className='col-4 mb-2 text-decoration-none'
             type='button'
-            to={`/films_search/one_film/${props.filmByPerson.filmId}`}
+            to={`/films/${props.filmByPerson.filmId}`}
         >
             {
                 props.filmByPerson ?

@@ -13,7 +13,7 @@ const SimilarFilm = (props) => {
         <Link
             className='col-2 mb-2 text-decoration-none'
             type='button'
-            to={`/films_search/one_film/${props.similarFilm.filmId}`}
+            to={`/films/${props.similarFilm.filmId}`}
         >
             <div className='d-flex justify-content-center'>
                 <img
