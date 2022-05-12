@@ -2,7 +2,7 @@ import React from 'react'
 
 import InterestingFacts from './InterestingFacts'
 
-import * as functions from './functions'
+import {formatDate} from './functions'
 
 import classes from './BasicInfo.module.css'
 
@@ -38,7 +38,7 @@ const BasicInfo = (props) => {
                                         {
                                             props.person.birthday ?
                                             <>
-                                                {functions.getBirthDay(props.person.birthday)}
+                                                {formatDate(props.person.birthday)}
                                                 &nbsp;
                                                 ({props.person.age}&nbsp; лет)
                                             </> :
@@ -92,7 +92,7 @@ const BasicInfo = (props) => {
                                         </div>
                                         <div className='col-7 text-light text-opacity-75'>
                                             <h5 className='pt-1'>
-                                                {functions.getDeathDay(props.person.death)}
+                                                {formatDate(props.person.death)}
                                             </h5>
                                         </div>
                                     </div>

@@ -1,12 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import {formatGenresToString, formatCountriesToString, formatType} from '../functions'
+import * as functions from '../functions'
 
 import linkHover from '../../ui/linkHover/linkHover.module.css'
 
 const Film = (props) => {
-
     return (
         <div className='d-flex flex-row justify-content-center m-5'>
             <div className='bg-dark bg-opacity-50 rounded shadow'>
@@ -63,7 +62,7 @@ const Film = (props) => {
                         </div>
                         <div className='col-8'>
                             <h5 className='text-light'>
-                                {formatCountriesToString(props.film.countries)}
+                                {functions.formatCountriesToString(props.film.countries)}
                             </h5>
                         </div>
                         <div className='col-4 border-end border-secondary'>
@@ -73,7 +72,7 @@ const Film = (props) => {
                         </div>
                         <div className='col-8'>
                             <h5 className='text-light'>
-                                {formatType(props.film.type)}
+                                {functions.formatType(props.film.type)}
                             </h5>
                         </div>
                         <div className='col-4 border-end border-secondary'>
@@ -83,7 +82,7 @@ const Film = (props) => {
                         </div>
                         <div className='col-8'>
                             <h5 className='text-light'>
-                                {formatGenresToString(props.film.genres)}
+                                {functions.formatGenresToString(props.film.genres)}
                             </h5>
                         </div>
                     </div>
