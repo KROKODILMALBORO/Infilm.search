@@ -38,7 +38,8 @@ const Pagination = (props) => {
                     <li className={
                             classNames(
                                 'page-item',
-                                {'disabled': props.filters.page === 1}
+                                {'disabled': props.filters.page === 1},
+                                {'disabled': !props.totalPages},
                             )
                         }
                     >
@@ -47,7 +48,8 @@ const Pagination = (props) => {
                                 classNames(
                                     'page-link border-0 bg-dark bg-opacity-75 fw-bold',
                                     {'text-info': props.filters.page > 1},
-                                    {'text-secondary': props.filters.page === 1}
+                                    {'text-secondary': props.filters.page === 1},
+                                    {'text-secondary': !props.totalPages},
                                 )
                             }
                             onClick={previousPage}
@@ -63,7 +65,8 @@ const Pagination = (props) => {
                     <li className={
                             classNames(
                                 'page-item',
-                                {'disabled': props.filters.page === props.totalPages}
+                                {'disabled': props.filters.page === props.totalPages},
+                                {'disabled': !props.totalPages},
                             )
                         }
                     >
@@ -73,7 +76,8 @@ const Pagination = (props) => {
                                     'page-link border-0 bg-dark bg-opacity-75 fw-bold',
                                     {'text-info': !props.persons && props.filters.page < props.totalPages},
                                     {'text-secondary': props.filters.page === props.totalPages},
-                                    {'text-secondary': props.persons && props.filters.page === 2}
+                                    {'text-secondary': props.persons && props.filters.page === 2},
+                                    {'text-secondary': !props.totalPages},
                                 )
                             }
                             onClick={nextPage}

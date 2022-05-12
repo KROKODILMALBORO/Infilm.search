@@ -41,25 +41,30 @@ const PersonsSearchPage = () => {
             <div className='container ps-5'>
                 {
                     persons ?
-                    persons.map((person) =>
-                        <Person
-                            key={person.kinopoiskId}
-                            person={person}
-                        />
-                    ) :
+                    persons.length ?
+                            persons.map((person) =>
+                                <Person
+                                    key={person.kinopoiskId}
+                                    person={person}
+                                />
+                            ) :
+                        <div className='d-flex flex-row justify-content-center'>
+                            <h2 className='text-light text-opacity-25 m-3'>
+                                По данному запросу ничего не найдено
+                            </h2>
+                        </div> :
                     <Spinner />
                 }
             </div>
             {
-                persons ?
+                persons && !!persons.length &&
                 <Pagination
                     filters={filters}
-                    setFilters={setFilters}
-                    onSearch={onSearch}
                     totalPages={totalPages}
                     persons={persons}
-                /> :
-                <></>
+                    setFilters={setFilters}
+                    onSearch={onSearch}
+                />
             }
         </div>
     )

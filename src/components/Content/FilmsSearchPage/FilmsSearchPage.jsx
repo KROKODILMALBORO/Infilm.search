@@ -35,23 +35,28 @@ const FilmsSearchPage = () => {
             />
             {
                 films ?
-                films.map((film) =>
-                    <Film
-                        key={film.kinopoiskId}
-                        film={film}
-                    />
-                ) :
+                    films.length ?
+                        films.map((film) =>
+                            <Film
+                                key={film.kinopoiskId}
+                                film={film}
+                            />
+                        ) :
+                        <div className='d-flex flex-row justify-content-center'>
+                            <h2 className='text-light text-opacity-25 m-3'>
+                                По данному запросу ничего не найдено
+                            </h2>
+                        </div> :
                 <Spinner />
             }
             {
-                films ?
+                films && !!films.length &&
                 <Pagination
                     filters={filters}
+                    totalPages={totalPages}
                     setFilters={setFilters}
                     onSearch={onSearch}
-                    totalPages={totalPages}
-                /> :
-                <></>
+                />
             }
         </div>
     )
