@@ -24,20 +24,12 @@ const Film = (props) => {
                                 to={`/films/${props.film.kinopoiskId}`}
                             >
                                 <h3 className='text-light py-2'>
-                                    {
-                                        props.film.nameRu ?
-                                        props.film.nameRu :
-                                        props.film.nameOriginal
-                                    }
+                                    {props.film.nameRu || props.film.nameOriginal}
                                 </h3>
                             </Link>
                             <div className='col-2 bg-dark bg-opacity-75 rounded-end shadow pt-1'>
                                 <h1 className='text-light text-opacity-75' align='center'>
-                                    {
-                                        props.film.ratingKinopoisk ?
-                                        props.film.ratingKinopoisk :
-                                        '-'
-                                    }
+                                    {props.film.ratingKinopoisk || '-'}
                                 </h1>
                             </div>
                         </div>
@@ -48,11 +40,7 @@ const Film = (props) => {
                         </div>
                         <div className='col-8'>
                             <h5 className='text-light'>
-                                {
-                                    props.film.year ?
-                                    props.film.year :
-                                    '(Данные отсутствуют)'
-                                }
+                                {props.film.year || '(Данные отсутствуют)'}
                             </h5>
                         </div>
                         <div className='col-4 border-end border-secondary'>

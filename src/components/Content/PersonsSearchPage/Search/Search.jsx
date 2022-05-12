@@ -22,7 +22,12 @@ const Search = (props) => {
                                 className='form-control form-control-lg bg-dark border border-secondary text-light shadow'
                                 placeholder='Введите имя на русском'
                                 value={props.filters.name}
-                                onChange={(e) => props.setFilters((filters) => ({...filters, name: e.target.value}))}
+                                onChange={(e) =>
+                                    props.setFilters((filters) => ({
+                                        ...filters,
+                                        name: e.target.value
+                                    }))
+                                }
                                 onKeyPress={handleKeyPress}
                             />
                         </div>
