@@ -15,8 +15,8 @@ export function usePersons() {
 
     return {
         persons,
-        getPersons,
         totalPages,
+        getPersons,
     }
 }
 
@@ -40,9 +40,9 @@ export function usePersonsByFilm() {
 
     const getPersonsByFilm = async (id) => {
         setPersonsByFilm(null)
-        const result = await fetches.getPersonsByFilm(id)
+        const persons = await fetches.getPersonsByFilm(id)
 
-        setPersonsByFilm(result)
+        setPersonsByFilm(persons)
     }
 
     return {

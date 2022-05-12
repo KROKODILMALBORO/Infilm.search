@@ -15,8 +15,8 @@ export function useFilms() {
 
     return {
         films,
-        getFilms,
         totalPages,
+        getFilms,
     }
 }
 

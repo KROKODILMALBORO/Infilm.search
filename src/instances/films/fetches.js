@@ -64,7 +64,6 @@ export async function getSimilarsFilms(id) {
 
         return {
             items: [],
-            totalPages: 1,
         }
     }
 }
