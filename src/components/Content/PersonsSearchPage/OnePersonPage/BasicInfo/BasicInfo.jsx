@@ -36,7 +36,7 @@ const BasicInfo = (props) => {
                                 <div className='col-7 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
                                         {
-                                            props.person.birthday != null ?
+                                            props.person.birthday ?
                                             <div>
                                                 {formatDate(props.person.birthday)}
                                                 <span>&nbsp;</span>

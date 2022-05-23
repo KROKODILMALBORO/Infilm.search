@@ -43,7 +43,7 @@ const FilmsSearchPage = () => {
                             />
                         ) :
                         <div className='d-flex flex-row justify-content-center'>
-                            <h2 className='text-light text-opacity-25 m-3'>
+                            <h2 className='text-secondary border border-secondary rounded p-3 m-3'>
                                 По данному запросу ничего не найдено
                             </h2>
                         </div> :

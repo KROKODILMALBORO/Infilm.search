@@ -40,7 +40,7 @@ export const formatFilmLength = (filmLength) => {
     return `${filmLength} минут(ы)`
 }
 
-export const fomatRatingAgeLimits = (ratingAgeLimits) => {
+export const formatRatingAgeLimits = (ratingAgeLimits) => {
     if (!ratingAgeLimits) {
 
         return '0+'
@@ -54,8 +54,8 @@ export const fomatRatingAgeLimits = (ratingAgeLimits) => {
 export const getDefaultFilters = () => {
     return {
         keyword: '',
-        yearFrom: 2000,
-        yearTo: 2000,
+        yearFrom: 2020,
+        yearTo: 2022,
         ratingFrom: 6,
         ratingTo: 9,
         type: 'FILM',

@@ -56,7 +56,7 @@ const BasicInfo = (props) => {
                         <div className='row'>
                             <div className='col-12 me-5'>
                             {
-                                props.film.description != null ?
+                                props.film.description ?
                                 <h4>{props.film.description}</h4> :
                                 <h3 className='text-light text-opacity-25 pe-5 me-5'>
                                     (Данные об описании произведения временно отсутствуют)
@@ -117,7 +117,7 @@ const BasicInfo = (props) => {
                                 </div>
                                 <div className='col-9 text-light text-opacity-75'>
                                     <h5 className='pt-1'>
-                                        {functions.fomatRatingAgeLimits(props.film.ratingAgeLimits)}
+                                        {functions.formatRatingAgeLimits(props.film.ratingAgeLimits)}
                                     </h5>
                                 </div>
                             </div>

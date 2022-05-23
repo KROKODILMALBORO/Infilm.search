@@ -1,6 +1,6 @@
 export const getDefaultFilters = () => {
     return {
-        name: 'Смит',
+        name: 'Джексон',
         page: 1,
     }
 }

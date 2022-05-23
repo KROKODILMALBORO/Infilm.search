@@ -4,11 +4,6 @@ import {Link} from 'react-router-dom'
 import linkHover from '../../ui/linkHover/linkHover.module.css'
 
 const Person = (props) => {
-    if (!props.person) {
-
-        return <div className='spinner-grow text-light p-4 m-4'></div>
-    }
-
     return (
         <Link
             className='col-2 text-decoration-none mx-3'
