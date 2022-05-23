@@ -20,5 +20,5 @@ To the author [Kinopoisk An unofficial API](https://kinopoiskapiunofficial.tech/
 ```javascript
 //token.js
 
-export const = TOKEN;
+export const TOKEN = <YOUR_TOKEN>;
 ```
